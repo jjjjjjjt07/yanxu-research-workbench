@@ -1,0 +1,6 @@
+# Alternative to .env for Wrangler local development. Use only one configuration file.
+AI_BASE_URL="https://api.deepseek.com"
+AI_MODEL="deepseek-flash"
+AI_API_KEY=""
+AI_DAILY_CALL_LIMIT="100"
+JOB_RUNNER_SECRET=""

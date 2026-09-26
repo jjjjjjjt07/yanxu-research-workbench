@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `graph_jobs_active_document` ON `graph_jobs` (`project_id`,`paper_id`,`task`) WHERE "graph_jobs"."status" IN ('queued','running');

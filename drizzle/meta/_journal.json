@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1788607348140,
+      "tag": "0000_soft_the_executioner",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1788780833727,
+      "tag": "0001_awesome_christian_walker",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1788844063294,
+      "tag": "0002_cold_madame_web",
+      "breakpoints": true
+    }
+  ]
+}
