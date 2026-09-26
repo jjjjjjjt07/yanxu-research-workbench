@@ -293,6 +293,18 @@ p = await api(
   201,
 );
 assert.equal(p.state.papers[1].kind, 'pdf');
+const pdfUrl = `${base}/api/projects/${projectId}/papers/${p.state.papers[1].id}?raw=1`;
+const partialPdf = await fetch(pdfUrl, {
+  headers: { cookie: '__sites_local_auth=1', Range: 'bytes=0-99' },
+});
+assert.equal(partialPdf.status, 206);
+assert.equal(partialPdf.headers.get('accept-ranges'), 'bytes');
+assert.equal(partialPdf.headers.get('content-range'), `bytes 0-99/${Buffer.byteLength(pdf)}`);
+assert.deepEqual(
+  Buffer.from(await partialPdf.arrayBuffer()),
+  Buffer.from(pdf).subarray(0, 100),
+);
+count++;
 console.log(
   JSON.stringify({
     passed: count,

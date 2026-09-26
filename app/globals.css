@@ -1223,6 +1223,27 @@ h2 {
   background: white;
   box-shadow: 0 2px 10px #15284412;
 }
+.pdf-loading {
+  margin: 0 0 8px;
+  color: #526783;
+  text-align: center;
+}
+.pdf-native {
+  display: grid;
+  gap: 8px;
+}
+.pdf-native iframe {
+  width: 100%;
+  height: min(78vh, 1000px);
+  min-height: 480px;
+  border: 0;
+  background: white;
+}
+.pdf-native a {
+  justify-self: end;
+  color: #315bba;
+  font-size: 13px;
+}
 .pdf-highlight {
   position: absolute;
   border: 1px solid #edc141;
